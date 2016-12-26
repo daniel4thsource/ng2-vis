@@ -1,12 +1,12 @@
 {
-  "name": "ng2-vis",
+  "name": "ng2-vis-4th",
   "version": "0.0.5",
   "main": "ng2-vis.js",
   "typings": "ng2-vis.d.ts",
   "description": "Angular 2 components for using vis.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seveves/ng2-vis.git"
+    "url": "git+https://github.com/daniel4thsource/ng2-vis.git"
   },
   "keywords": [
     "angular2",
@@ -18,9 +18,9 @@
   "author": "Severin Friede <seveves>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seveves/ng2-vis/issues"
+    "url": "https://github.com/daniel4thsource/ng2-vis/issues"
   },
-  "homepage": "https://github.com/seveves/ng2-vis#readme",
+  "homepage": "https://github.com/daniel4thsource/ng2-vis#readme",
   "scripts": {
     "flow.compile": "npm run flow.compile:common && npm run flow.compile:system && npm run flow.extract-metadata",
     "flow.compile:typings": "./node_modules/.bin/typings install",
