@@ -1,6 +1,6 @@
 {
   "name": "ng2-vis-4th",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "main": "ng2-vis.js",
   "typings": "ng2-vis.d.ts",
   "description": "Angular 2 components for using vis.js",

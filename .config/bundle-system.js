@@ -17,7 +17,7 @@ const Builder = require('systemjs-builder');
 
 const pkg = require('../package.json');
 //const name = pkg.name;
-const name = 'ng-vis';
+const name = 'ng2-vis';
 const targetFolder = path.resolve('./bundles');
 
 async.waterfall([

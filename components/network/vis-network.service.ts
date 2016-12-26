@@ -920,7 +920,46 @@ export class VisNetworkService {
     if (this.networks[visNetwork]) {
       return this.networks[visNetwork].getSeed();
     }
-
     return -1;
   }
+  /**
+   * Returns the x y positions in canvas space of the nodes with the supplied nodeIds as an object. 
+   * Alternative inputs are a String containing a nodeId or nothing. When a String is supplied, the position 
+   * of the node corresponding to the ID is returned. When nothing is supplied, the positions of all nodes are returned.
+   * 
+   * @param {string} visNetwork The network name/identifier.
+   * @param {string} nodeId The associated node id.
+   * @returns {IPosition} True if the node whose ID has been supplied is a cluster.
+   * 
+   * @memberOf VisNetworkService
+   */
+  public getPositions(visNetwork: string, nodeId: string): VisPosition {
+    if (this.networks[visNetwork]) {
+      return this.networks[visNetwork].getPositions(nodeId);
+    } else {
+      throw new Error(`Network with id ${visNetwork} not found.`);
+    }
+  }
+  /**
+   * You can animate or move the camera using the moveTo method. The position (in canvas units!) is the position 
+   * of the central focus point of the camera. The scale is the target zoomlevel. Default value is 1.0. The 
+   * offset (in DOM units) is how many pixels from the center the view is focussed. Default value is {x:0,y:0}. 
+   * For animation you can either use a Boolean to use it with the default options or disable it or you can define 
+   * the duration (in milliseconds) and easing function manually. Available are: linear, easeInQuad, easeOutQuad, 
+   * easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, 
+   * easeOutQuint, easeInOutQuint. You will have to define at least a scale, position or offset. Otherwise, there is nothing to move to.
+   * 
+   * @param {string} visNetwork The network name/identifier.
+   * @param {any} nodeId The associated node id.
+   * 
+   * @memberOf VisNetworkService
+   */
+  public moveTo(visNetwork: string, options: any): void {
+    if (this.networks[visNetwork]) {
+      return this.networks[visNetwork].moveTo(options);
+    } else {
+      throw new Error(`Network with id ${visNetwork} not found.`);
+    }
+  }
+
 }
