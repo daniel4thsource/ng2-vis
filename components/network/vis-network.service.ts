@@ -955,5 +955,40 @@ export class VisNetworkService {
       throw new Error(`Network with id ${visNetwork} not found.`);
     }
   }
+  /**
+   * This function converts canvas coordinates to coordinates on the DOM. Input and output are in the form of {x:Number,y:Number}. 
+   * The DOM values are relative to the network container
+   * 
+   * @param {string} visNetwork The network name/identifier.
+   * @param {IPosition} canvasPosition Canvas Coordinates.
+   * @returns {IPosition} DOM Coordinates.
+   * 
+   * @memberOf VisNetworkService
+   */
+  public CanvasToDom(visNetwork: string, canvasPosition: VisPosition): VisPosition {
+    if (this.networks[visNetwork]) {
+      return this.networks[visNetwork].canvasToDOM(canvasPosition);
+    } else {
+      throw new Error(`Network with id ${visNetwork} not found.`);
+    }
+  }
+  /**
+   * Returns the x y positions in canvas space of the nodes with the supplied nodeIds as an object. 
+   * Alternative inputs are a String containing a nodeId or nothing. When a String is supplied, the position 
+   * of the node corresponding to the ID is returned. When nothing is supplied, the positions of all nodes are returned.
+   * 
+   * @param {string} visNetwork The network name/identifier.
+   * @param {IPosition} DOMPosition DOM Coordinates.
+   * @returns {IPosition} Canvas Coordinates.
+   * 
+   * @memberOf VisNetworkService
+   */
+  public DOMtoCanvas(visNetwork: string, DOMPosition: VisPosition): VisPosition {
+    if (this.networks[visNetwork]) {
+      return this.networks[visNetwork].DOMtoCanvas(DOMPosition);
+    } else {
+      throw new Error(`Network with id ${visNetwork} not found.`);
+    }
+  }
 
 }
