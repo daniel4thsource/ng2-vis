@@ -1,10 +1,10 @@
-import * as Vis from 'vis';
+import * as Vis from 'vis-4th';
 
 import { VisDataSetOptions, VisDataSetQueueOptions, VisId } from '../timeline/index';
 
 export { VisId } from '../timeline/index';
 export type VisNetworkEvents = Vis.NetworkEvents;
-export interface VisClusterOptions extends Vis.IClusterOptions {}
+export interface VisClusterOptions extends Vis.IClusterOptions { /*empty*/ }
 export interface VisOpenClusterOptions extends Vis.IOpenClusterOptions {}
 export interface VisNetworkData extends Vis.IData {}
 export interface VisNode extends Vis.INode {}

@@ -1,6 +1,6 @@
 {
   "name": "ng2-vis-4th",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "ng2-vis.js",
   "typings": "ng2-vis.d.ts",
   "description": "Angular 2 components for using vis.js",
@@ -42,7 +42,6 @@
     "flow.serve:prod": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack-dev-server --hot --inline --colors --display-error-details --display-cached",
     "prepublish": "npm run flow.clean && npm run flow.compile",
     "start": "npm run flow.serve:dev",
-    "pretest": "npm run flow.lint",
     "test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/karma start",
     "test:watch": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/karma start --auto-watch --no-single-run",
     "preversion": "npm test",
@@ -50,7 +49,7 @@
     "postversion": "git push origin master && git push --tags"
   },
   "dependencies": {
-    "vis": "^4.17.0"
+    "vis-4th": "^4.17.6"
   },
   "peerDependencies": {
     "@angular/common": "^2.3.0",

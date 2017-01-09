@@ -1,4 +1,4 @@
-import * as Vis from 'vis';
+import * as Vis from 'vis-4th';
 
 export type VisId = Vis.IdType;
 export interface VisTimelineItem extends Vis.DataItem {}

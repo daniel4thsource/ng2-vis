@@ -49,15 +49,15 @@ function getSystemJsBundleConfig(cb) {
       '@angular/platform-browser': path.resolve('node_modules/@angular/platform-browser/index.js'),
       '@angular/platform-browser-dynamic': path.resolve('node_modules/@angular/platform-browser-dynamic/'),
       rxjs: path.resolve('node_modules/rxjs'),
-      vis: path.resolve('node_modules/vis/index.js')
+      'vis-4th': path.resolve('node_modules/vis-4th/index.js')
     },
     paths: {
       '*': '*.js'
     }
   };
-
   config.meta = ['@angular/common','@angular/compiler','@angular/core', '@angular/forms',
-    '@angular/platform-browser','@angular/platform-browser-dynamic', 'rxjs', 'vis'].reduce((memo, currentValue) => {
+    '@angular/platform-browser','@angular/platform-browser-dynamic', 'rxjs', 'vis-4th'].reduce((memo, currentValue) => {
+      console.log(currentValue);
     memo[path.resolve(`node_modules/${currentValue}/*`)] = {build: false};
     return memo;
   }, {});
