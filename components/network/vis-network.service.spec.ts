@@ -47,6 +47,7 @@ describe('VisNetworkService Tests', () => {
     expect(() => visNetworkService.redraw('unknown')).toThrowError();
     expect(() => visNetworkService.enableEditMode('unknown')).toThrowError();
     expect(() => visNetworkService.addEdgeMode('unknown')).toThrowError();
+    expect(() => visNetworkService.addEdgeModeWithSelectedNode('unknown', null)).toThrowError();
     expect(() => visNetworkService.disableEditMode('unknown')).toThrowError();
     expect(() => visNetworkService.deleteSelected('unknown')).toThrowError();
     expect(() => visNetworkService.cluster('unknown')).toThrowError();

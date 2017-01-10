@@ -965,6 +965,14 @@ declare namespace __vis {
      * @memberOf Network
      */
     public addEdgeMode(): void;
+    
+    /**
+     * Go into addEdgeModeWithSelectedNode mode.
+     * The explaination from addNodeMode applies here as well.
+     * 
+     * @memberOf Network
+     */
+    public addEdgeModeWithSelectedNode(event: Event): void;
 
     /**
      * Go into editEdge mode.

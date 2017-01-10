@@ -986,4 +986,26 @@ export class VisNetworkService {
     }
   }
 
+  
+
+  /**
+   * Go into addEdge mode and selects the node automatically.
+   * The explaination from addNodeMode applies here as well.
+   * 
+   * @param {string} visNetwork The network name/identifier.
+   * 
+   * @param {Event} event Event from the original event that trigger the selection.
+   * 
+   * @throws {Error} Thrown when the network does not exist.
+   * 
+   * @memberOf VisNetworkService
+   */
+  public addEdgeModeWithSelectedNode(visNetwork: string, event: Event): void {
+    if (this.networks[visNetwork]) {
+      this.networks[visNetwork].addEdgeModeWithSelectedNode(event);
+    } else {
+      throw new Error(`Network with id ${visNetwork} not found.`);
+    }
+  }
+
 }
