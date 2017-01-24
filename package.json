@@ -1,6 +1,6 @@
 {
   "name": "ng2-vis-4th",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "main": "ng2-vis.js",
   "typings": "ng2-vis.d.ts",
   "description": "Angular 2 components for using vis.js",
@@ -50,7 +50,7 @@
     "postversion": "git push origin master && git push --tags"
   },
   "dependencies": {
-    "vis-4th": "^4.17.6"
+    "vis-4th": "^4.17.8"
   },
   "peerDependencies": {
     "@angular/common": "^2.3.0",

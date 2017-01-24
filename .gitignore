@@ -37,3 +37,6 @@ ng2-vis.js.map
 factories
 /**/*.metadata.json
 /**/*.ngfactory.ts
+
+# Log files
+*.log
