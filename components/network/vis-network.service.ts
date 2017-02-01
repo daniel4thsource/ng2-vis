@@ -465,6 +465,26 @@ export class VisNetworkService {
   }
 
   /**
+   * Selects the edges corresponding to the id's in the input array.
+   * This method unselects all other objects before selecting its own objects.
+   * Does not fire events.
+   * 
+   * @param {string} visNetwork The network name/identifier.
+   * @param {VisId[]} edgeIds The edge ids that should be selected.
+   * 
+   * @throws {Error} Thrown when the network does not exist.
+   * 
+   * @memberOf VisNetworkService
+   */
+  public selectEdges(visNetwork: string, edgeIds: VisId[]): void {
+    if (this.networks[visNetwork]) {
+      this.networks[visNetwork].selectEdges(edgeIds);
+    } else {
+      throw new Error(`Network with id ${visNetwork} not found.`);
+    }
+  }
+
+  /**
    * Returns an object with selected nodes and edges ids.
    * 
    * @param {string} visNetwork The network name/identifier.
