@@ -1028,4 +1028,41 @@ export class VisNetworkService {
     }
   }
 
+  /**
+   * Returns a nodeId or undefined. The DOM positions are expected to be in pixels from the top left corner of the canvas.
+   * 
+   * @param {string} visNetwork The network name/identifier.
+   * 
+   * @param {VisPosition} DOMPosition DOM position.
+   * 
+   * @throws {Error} Thrown when the network does not exist.
+   * 
+   * @memberOf VisNetworkService
+   */
+  public getNodeAt(visNetwork: string,  DOMPosition: VisPosition): VisId {
+    if (this.networks[visNetwork]) {
+      return this.networks[visNetwork].getNodeAt(DOMPosition);
+    } else {
+      throw new Error(`Network with id ${visNetwork} not found.`);
+    }
+  }
+  /**
+   * Returns a edgeId or undefined. The DOM positions are expected to be in pixels from the top left corner of the canvas.
+   * 
+   * @param {string} visNetwork The network name/identifier.
+   * 
+   * @param {VisPosition} DOMPosition DOM position.
+   * 
+   * @throws {Error} Thrown when the network does not exist.
+   * 
+   * @memberOf VisNetworkService
+   */
+  public getEdgeAt(visNetwork: string,  DOMPosition: VisPosition): VisId {
+    if (this.networks[visNetwork]) {
+      return this.networks[visNetwork].getEdgeAt(DOMPosition);
+    } else {
+      throw new Error(`Network with id ${visNetwork} not found.`);
+    }
+  }
+
 }

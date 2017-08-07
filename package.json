@@ -1,6 +1,6 @@
 {
   "name": "ng2-vis-4th",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "main": "ng2-vis.js",
   "typings": "ng2-vis.d.ts",
   "description": "Angular 2 components for using vis.js",
@@ -51,13 +51,6 @@
   },
   "dependencies": {
     "vis-4th": "^4.17.9"
-  },
-  "peerDependencies": {
-    "@angular/common": "^2.3.0",
-    "@angular/core": "^2.3.0",
-    "@angular/compiler": "^2.3.0",
-    "@angular/forms": "^2.3.0",
-    "@angular/router": "^3.3.0"
   },
   "devDependencies": {
     "@angular/common": "^2.3.0",
